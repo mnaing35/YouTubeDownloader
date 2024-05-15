@@ -1,5 +1,6 @@
 import inputvalidation as iv
 import crud
+import os
 
 print("Welcome to the Video Management System")
 print("!Enter the number in the menu to perform various operations!")
@@ -8,6 +9,7 @@ print("---------------------------------------------------------")
 print("1. Add a New Video\n2. View Video List\n3. Search for a Video\n4. Update Video Information\n5. Delete a Video\n6. Close the Program")
 print("---------------------------------------------------------")
 
+os.makedirs("./videos/", exist_ok=True)
 # Update json and csv
 crud.list_json_csv('./videos/')
 
