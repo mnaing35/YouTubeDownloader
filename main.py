@@ -9,12 +9,12 @@ print("---------------------------------------------------------")
 print("1. Add a New Video\n2. View Video List\n3. Search for a Video\n4. Update Video Information\n5. Delete a Video\n6. Close the Program")
 print("---------------------------------------------------------")
 
+# Input Validation
+menu_input = iv.in_vali(6, input("Enter your choice (1-6) => "))
+
 os.makedirs("./videos/", exist_ok=True)
 # Update json and csv
 crud.list_json_csv('./videos/')
-
-# Input Validation
-menu_input = iv.in_vali(6, input("Enter your choice (1-6) => "))
 
 # For Repeated Operations
 while menu_input != 6:
